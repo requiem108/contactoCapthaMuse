@@ -1,0 +1,1 @@
+var URLdireccion = 'http://localhost/502/Forgresa/';

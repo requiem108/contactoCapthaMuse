@@ -1,1 +1,1 @@
-var URLdireccion = 'http://localhost/502/Forgresa/';
+var URLdireccion = 'https://www.forgesa.net/';

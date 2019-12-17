@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <HTMLWidget name="Formulario captcha" formatNumber="3"
         localization="none" creator="Tod" 
-        defaultWidth="600" defaultHeight="800" 
+        defaultWidth="450" defaultHeight="100" 
         isResizable="true">
         
    <headHTML>
     <![CDATA[    
       <style>
-      .ContenedorContacto502{
+          .ContenedorContacto502{
             display: flex;
             justify-content: center;
             flex-direction: column;
@@ -47,150 +47,30 @@
             margin: 10px 10px;
             border: solid black 1px;
         }
-
-        .DatosContacto502{    
-            display: flex;
-            flex-direction: column;
-            box-sizing: border-box;
-            padding: 20px;
-        }
-        .contactoInf{
-            display: flex;
-            flex-direction: row;
-
-        }
-        .FilaA,.FilaB{
-        /*    background-color: tomato;*/
-            width: 50%;
-            box-sizing: border-box;
-            text-align: center;
-        }
-
-        .marcoCo502{
-            margin: 40px 0px;
-
-        }
-        .marcoCo502 p{
-            line-height:.5;
-            font-family: Helvetica, Helvetica Neue, Arial, sans-serif;
-            font-size: 14px
-        }
-        @media(min-width: 720px){
-            .ContenedorContacto502{
-                flex-direction: row;
-            }
-            .formContacto502{
-                width: 50%;
-                max-width: 490px;
-                max-height: 500px
-            }
-            .DatosContacto502{
-                 width: 50%;
-                 max-width: 490px;
-            }
-            .marcoCo502 p{
-            line-height:1;
-
-        }
-        }
       
        </style>
+       
+            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
      ]]>
     </headHTML>
     
     <pageItemHTML>
     <![CDATA[
            <div class="ContenedorContacto502">
+       
+               <form class='formContacto502' id="formContacto502">
+                    <input class="inp502"type="text" name="nombreContacto" placeholder="Introducir Nombre" id="nombreCo502" required>
+                    <input class="inp502" type="email" name="emailContacto" placeholder="Introducir correo electrónico" id="emailCo502" required>
+                    <textarea class="inp502" name="mensaje" id="mensajeCo502" cols="30" rows="10" placeholder="Escriba su mensaje"></textarea>
+                    <input class="inpVal502" type="text" id="validarCo502">
 
-           <form class='formContacto502' id="formContacto502">
-                <input class="inp502"type="text" name="nombreContacto" placeholder="Introducir Nombre" id="nombreCo502" required>
-                <input class="inp502" type="email" name="emailContacto" placeholder="Introducir correo electrónico" id="emailCo502" required>
-                <textarea class="inp502" name="mensaje" id="mensajeCo502" cols="30" rows="10" placeholder="Escriba su mensaje"></textarea>
-                <input class="inpVal502" type="text" id="validarCo502">
+                    <div class="g-recaptcha" data-sitekey="6LccgMcUAAAAALBa5AiPil4RM8qn00yROBXHQbDv"></div>
 
-                <div class="g-recaptcha" data-sitekey="6LccgMcUAAAAALBa5AiPil4RM8qn00yROBXHQbDv"></div>
-
-                <input class="botonCo502" type="submit" value="ENVIAR">
-                <div class="Respuesta502" id="Respuesta502"></div>
-            </form>
-
-            <div class="DatosContacto502">
-
-               <div class="ContactoTexto">
-                   <p>Permítanos atenderle. No dude en contactarnos, ya sea visitando nuestras instalaciones, llenando la forma de contacto o contactando directamente a uno de nuestros vendedores.</p>
-               </div>
-               <div class="contactoInf">
-                   <div class="FilaA">
-                   <div class="marcoCo502">
-                      <p> GERENTE DE VENTASD</p>
-                       <p> jmartinez@forgesa.net</p>
-                        <p> +52 (461) 10 11 574</p>
-                    </div>
-
-                    <div class="marcoCo502">
-                      <p>CELAYA, GTO.</p>
-                      <p>jzavalac@forgesa.net</p>
-                      <p>+52 (461) 25 40 571</p>      
-                    </div>
-
-                     <div class="marcoCo502">
-                      <p>CELAYA, GTO.</p>
-                      <p>polo@forgesa.net</p>
-                      <p>+52 (461) 25 40 570</p>      
-                    </div> 
-
-                    <div class="marcoCo502">      
-                      <p> MORELIA, MICH.</p>
-                       <p> minerva@forgesa.net</p>
-                        <p> +52 (461) 10 11 574</p>
-                    </div>
-
-                    <div class="marcoCo502">
-                      <p> IRAPUATO, GTO.</p>
-                       <p>jzavalac@forgesa.net</p>
-                        <p>+52 (462) 25 40 571</p>
-                    </div>
-               </div>
-
-               <div class="FilaB">
-                   <div class="marcoCo502">
-                  <p> LEÓN, GTO.</p>
-                   <p> lourdes@forgesa.net</p>
-                    <p>  +52 (477) 26 45 311</p>
-                </div>
-
-                <div class="marcoCo502">
-                  <p> SAN LUIS POTOSI,SLP.</p>
-                   <p> jorgeb@forgesa.net</p>
-                    <p> +52 (461) 10 11 574</p>
-                </div>
-
-                <div class="marcoCo502">
-                  <p> QUERÉTARO, QRO.</p>
-                   <p>Lguerrero@forgesa.net</p>
-                    <p> +52 (442) 33 64 121</p>
-                </div>
-
-                <div class="marcoCo502">             
-                  <p> QUERÉTARO, QRO.</p>
-                   <p> vsantamaria@forgesa.net</p>
-                    <p> +52 (442) 22 65 717</p>
-                    <p> +52 (442) 19 07 607</p>
-                </div>
-
-                <div class="marcoCo502">
-                  <p> AGUASCALIENTES</p>
-                   <p> cecilian@forgesa.net</p>
-                    <p>  +52 (461) 10 11 574</p>
-                </div>
-               </div> 
-
-
-               </div>
-
-            </div>
-
-        </div>       
+                    <input class="botonCo502" type="submit" value="ENVIAR">
+                    <div class="Respuesta502" id="Respuesta502"></div>
+                </form>
+            </div>      
        ]]>
     </pageItemHTML>
     

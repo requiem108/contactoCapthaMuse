@@ -24,7 +24,7 @@ if(isset($_POST['g-recaptcha-response'])){
 <?php
 
 function ValidarGoogle(){
-    $secret = '6Lc8hccUAAAAAMWXSGSyC9OAKOGHBFCBqtgDvixv';
+    $secret = '6LcdsscUAAAAAIEw5LZbkjns_1t_6ZxRxdiEi5vn';
     $respuesta = $_POST['g-recaptcha-response'];
     $ip = $_SERVER['REMOTE_ADDR'];
 
@@ -40,7 +40,7 @@ function ValidarGoogle(){
 function Mandarmail($nombre, $correo, $mensaje){
     
     //origen
-    $mail = "";
+    $mail = "isa@502grados.com";
 
     $header = 'From: ' . $mail . " \r\n";
     $header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
@@ -79,7 +79,7 @@ function Mandarmail($nombre, $correo, $mensaje){
     ';
 
     //destino
-    $para = '';
+    $para = 'isa@502grados.com';
     $asunto = 'Cotizacion de mi sitio web';
 
     $respuesta=mail($para, $asunto, utf8_decode($mensaje), $header);
